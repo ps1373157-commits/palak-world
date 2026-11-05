@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171326">
+  <title>Admin Dashboard | Palak World</title>
+
+  <link rel="stylesheet" href="../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../shared/styles/base.css">
+  <link rel="stylesheet" href="../shared/styles/components.css">
+  <link rel="stylesheet" href="./styles/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <h1 class="admin-brand">✦ Palak World</h1>
+
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="#overview" class="active">⌂ Overview</a>
+        <a href="#letters">✉ Letters</a>
+        <a href="#gallery">▧ Gallery</a>
+        <a href="#calendar">▦ Calendar</a>
+        <a href="#quizzes">◇ Quizzes</a>
+        <a href="#companion">✧ Companion</a>
+        <a href="#deliveries">◷ Deliveries</a>
+        <a href="#settings">⚙ Settings</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+
+      <header class="admin-header">
+        <div>
+          <p class="muted">Personal workspace</p>
+          <h2 class="page-title">Dashboard</h2>
+        </div>
+        <span class="badge">Admin mode</span>
+      </header>
+
+      <section id="overview">
+        <div class="admin-notice">
+          Welcome to your workspace. Manage letters, memories,
+          activities and your virtual world from here.
+        </div>
+
+        <div class="admin-stats">
+          <article class="card">
+            <span class="muted">Letters created</span>
+            <p class="admin-stat-value">0</p>
+          </article>
+
+          <article class="card">
+            <span class="muted">Scheduled letters</span>
+            <p class="admin-stat-value">0</p>
+          </article>
+
+          <article class="card">
+            <span class="muted">Upcoming events</span>
+            <p class="admin-stat-value">0</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="letters" class="admin-section card">
+        <h2>✉ Letters</h2>
+        <p class="muted">Create, organize and schedule letters.</p>
+        <a class="btn" href="#letters">Letter management</a>
+      </section>
+
+      <section id="gallery" class="admin-section card">
+        <h2>▧ Memory Gallery</h2>
+        <p class="muted">Manage photos approved for the recipient's view-only gallery.</p>
+      </section>
+
+      <section id="calendar" class="admin-section card">
+        <h2>▦ Calendar</h2>
+        <p class="muted">Organize important dates and reminders.</p>
+      </section>
+
+      <section id="quizzes" class="admin-section card">
+        <h2>◇ Quizzes & Questions</h2>
+        <p class="muted">Create quizzes and interactive question games.</p>
+      </section>
+
+      <section id="companion" class="admin-section card">
+        <h2>✧ Anime Companion</h2>
+        <p class="muted">Manage character messages, scenes and virtual locations.</p>
+      </section>
+
+      <section id="deliveries" class="admin-section card">
+        <h2>◷ Delivery History</h2>
+        <p class="muted">Review scheduled delivery and notification statuses.</p>
+      </section>
+
+      <section id="settings" class="admin-section card">
+        <h2>⚙ Settings</h2>
+        <p class="muted">Manage account, privacy and notification preferences.</p>
+      </section>
+
+      <footer class="admin-section muted">
+        Palak World · Admin Workspace
+      </footer>
+
+    </main>
+  </div>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>

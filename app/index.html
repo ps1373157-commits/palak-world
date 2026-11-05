@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAF9FE">
+  <meta name="description" content="A little world of letters, memories and creativity.">
+  <title>Palak World</title>
+
+  <link rel="stylesheet" href="../shared/styles/tokens.css">
+  <link rel="stylesheet" href="../shared/styles/base.css">
+  <link rel="stylesheet" href="../shared/styles/components.css">
+  <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+  <main id="app-root" class="app-shell">
+
+    <section id="home" class="app-screen">
+    <header class="app-header">
+      <div>
+        <p class="muted">Your little universe ✨</p>
+        <h1 class="app-greeting">Hello, Palak!</h1>
+      </div>
+      <span class="badge">My World</span>
+    </header>
+
+    <section class="companion-card" aria-label="Virtual companion">
+      <p class="muted">Your little companion</p>
+      <div class="companion-avatar" aria-hidden="true">🌸</div>
+      <div class="thought-bubble">
+        A little moment of happiness is waiting for you!
+      </div>
+    </section>
+
+    <section class="app-section">
+      <div class="app-section-header">
+        <h2>💌 Your latest letter</h2>
+        <a href="#letters">View all</a>
+      </div>
+
+      <article class="letter-preview">
+        <span class="badge">Welcome</span>
+        <h3>A little note for you</h3>
+        <p class="muted">
+          This space will hold letters and thoughtful messages.
+          Your letters will appear here when delivered.
+        </p>
+        <p class="muted">No letters yet</p>
+      </article>
+    </section>
+
+    <section class="app-section">
+      <div class="app-section-header">
+        <h2>Explore your world</h2>
+      </div>
+
+      <div class="quick-grid">
+        <a class="quick-item" href="#letters">
+          <span class="quick-icon">💌</span>
+          <strong>Letters</strong>
+        </a>
+
+        <a class="quick-item" href="#gallery">
+          <span class="quick-icon">🖼️</span>
+          <strong>Gallery</strong>
+        </a>
+
+        <a class="quick-item" href="#calendar">
+          <span class="quick-icon">📅</span>
+          <strong>Calendar</strong>
+        </a>
+
+        <a class="quick-item" href="#quizzes">
+          <span class="quick-icon">🎮</span>
+          <strong>Games</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="app-section world-card">
+      <div>
+        <span class="badge">Virtual world</span>
+        <h2>Somewhere magical ✨</h2>
+        <p class="muted">Your little world is waiting to be explored.</p>
+      </div>
+      <span aria-hidden="true" style="font-size:2.5rem">🏡</span>
+    </section>
+
+
+    </section>
+
+    <section id="letters" class="app-screen" hidden>
+      <h1>Your Letters 💌</h1>
+      <p class="muted">Your delivered letters will appear here.</p>
+      <article class="card">
+        <p>No letters delivered yet.</p>
+      </article>
+    </section>
+
+    <section id="gallery" class="app-screen" hidden>
+      <h1>Memory Gallery 🖼️</h1>
+      <p class="muted">A private collection of shared memories.</p>
+      <article class="card">
+        <p>Your gallery is waiting for its first memory.</p>
+        <p class="muted">Photos will be view-only by default.</p>
+      </article>
+    </section>
+
+    <section id="calendar" class="app-screen" hidden>
+      <h1>Our Calendar 📅</h1>
+      <p class="muted">Important dates and special moments.</p>
+      <article class="card">
+        <p>No events added yet.</p>
+      </article>
+    </section>
+
+    <section id="quizzes" class="app-screen" hidden>
+      <h1>Little Games 🎮</h1>
+      <p class="muted">Fun questions and creative quizzes.</p>
+      <article class="card">
+        <p>No quizzes available yet.</p>
+      </article>
+    </section>
+
+    <section id="world" class="app-screen" hidden>
+      <h1>Your Little World ✨</h1>
+      <p class="muted">Explore your virtual anime-inspired world.</p>
+      <article class="card">
+        <p>More magical places are coming soon.</p>
+      </article>
+    </section>
+
+    <section id="profile" class="app-screen" hidden>
+      <h1>Your Profile 🌸</h1>
+      <article class="card">
+        <p>Palak World</p>
+        <p class="muted">Your personal space and preferences.</p>
+      </article>
+      <article class="card">
+        <h2>Privacy & Controls</h2>
+        <p class="muted">Notification preferences, read-receipt information and data-removal requests will be available here.</p>
+      </article>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <a class="active" href="#home">⌂<span>Home</span></a>
+      <a href="#letters">✉<span>Letters</span></a>
+      <a href="#world">✧<span>World</span></a>
+      <a href="#gallery">▧<span>Gallery</span></a>
+      <a href="#profile">◉<span>Profile</span></a>
+    </nav>
+
+  </main>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
