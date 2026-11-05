@@ -214,3 +214,61 @@
     transition: none;
   }
 }
+
+
+/* Mikasa World */
+.mikasa-world-character {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.mikasa-world-image {
+  display: block;
+  width: min(100%, 240px);
+  height: 260px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.mikasa-world-fallback {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.mikasa-thought {
+  margin: 1rem auto;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.mikasa-scene-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.mikasa-scene {
+  width: 100%;
+  min-height: 65px;
+  border: 1px solid var(--border, #e8e2f0);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.mikasa-scene.active {
+  border-color: var(--primary, #8065C9);
+  background: var(--surface, #f4efff);
+}
+
+.mikasa-scene:focus-visible {
+  outline: 2px solid var(--primary, #8065C9);
+  outline-offset: 3px;
+}
+
+@media (max-width: 360px) {
+  .mikasa-scene-grid {
+    grid-template-columns: 1fr;
+  }
+}

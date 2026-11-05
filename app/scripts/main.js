@@ -1,5 +1,6 @@
 import { createStore } from '../../shared/scripts/store.js';
 import RecipientScreens from './modules/screens.js';
+import MikasaWorld from './modules/world.js';
 
 const appStore = createStore({
   currentScreen: window.location.hash.slice(1) || 'home',
@@ -8,6 +9,7 @@ const appStore = createStore({
 
 document.addEventListener('DOMContentLoaded', () => {
   RecipientScreens.initialize();
+  MikasaWorld.initialize();
 
   appStore.setState({
     initialized: true

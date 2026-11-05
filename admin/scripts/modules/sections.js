@@ -17,36 +17,36 @@ const AdminSections = {
 
     this.sections.forEach(name => {
       const element = document.getElementById(name);
-
-      if (element) {
-        this.elements.set(name, element);
-      }
+      if (element) this.elements.set(name, element);
     });
 
-    this.navigate(window.location.hash.slice(1) || "overview");
+    document.querySelectorAll(".admin-nav a").forEach(link => {
+      link.addEventListener("click", event => {
+        const name = link.hash.slice(1);
+        if (!this.sections.includes(name)) return;
 
-    window.addEventListener("hashchange", () => {
-      this.navigate(window.location.hash.slice(1) || "overview");
+        event.preventDefault();
+        this.navigate(name);
+        history.replaceState(null, "", `#${name}`);
+      });
     });
+
+    this.navigate(location.hash.slice(1) || "overview");
   },
 
   navigate(name) {
     if (!this.sections.includes(name)) return;
 
     this.elements.forEach((element, id) => {
-      const active = id === name;
-      element.hidden = !active;
+      element.hidden = id !== name;
     });
 
     document.querySelectorAll(".admin-nav a").forEach(link => {
       const active = link.hash === `#${name}`;
       link.classList.toggle("active", active);
 
-      if (active) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
   }
 };
