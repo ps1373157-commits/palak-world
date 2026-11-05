@@ -1,21 +1,22 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'node:path';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: './',
-
+  base: '/palak-world/',
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        admin: resolve(__dirname, 'admin/index.html'),
-        app: resolve(__dirname, 'app/index.html')
+        main: resolve(root, 'index.html'),
+        admin: resolve(root, 'admin/index.html'),
+        app: resolve(root, 'app/index.html')
       }
     },
     outDir: 'dist',
     emptyOutDir: true
   },
-
   server: {
     host: '0.0.0.0',
     port: 5173,
